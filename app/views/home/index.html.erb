@@ -1,0 +1,7 @@
+
+<% if current_user.present? %>
+    Hello <%= current_user.email %>
+<% else %>
+    <h2>please login in!</h2>
+    <h2><%= link_to 'Sign in', user_session_path %></h2>
+<% end %>
